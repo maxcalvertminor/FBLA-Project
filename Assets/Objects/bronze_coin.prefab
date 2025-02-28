@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6065618872695658877}
   - component: {fileID: -6689375487879621858}
   - component: {fileID: -7483764578805700910}
+  - component: {fileID: -6420442284099022114}
   m_Layer: 0
-  m_Name: coin
+  m_Name: bronze_coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.327684, y: 14.872187, z: -6.3059216}
-  m_LocalScale: {x: 50, y: 50, z: 5.5}
+  m_LocalScale: {x: 30, y: 30, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b92698e48c05f1546bc8ceb0424c3a9c, type: 2}
+  - {fileID: 2100000, guid: 82876026310099340a340ce57137f7a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,3 +135,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &-6420442284099022114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401810980382673745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db23abc84143b2043b11a652ec1ca924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  seconds: 5

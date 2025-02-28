@@ -25,8 +25,8 @@ public class CameraScript : MonoBehaviour
         yRotate += -mouseY * sensitivity * Time.deltaTime;
         yRotate = Mathf.Clamp(yRotate, -90, 90);
         xRotate += mouseX  * sensitivity * Time.deltaTime;
-        cam.transform.localEulerAngles = (new Vector3(yRotate, 0, 0));
-        player.transform.eulerAngles = (new Vector3(0, xRotate, 0));
+        cam.transform.localEulerAngles = new Vector3(yRotate, 0, 0);
+        player.transform.eulerAngles = new Vector3(0, xRotate, 0);
         //player.transform.eulerAngles += (new Vector3(0, mouseX, 0) * sensitivity);
     }
 }

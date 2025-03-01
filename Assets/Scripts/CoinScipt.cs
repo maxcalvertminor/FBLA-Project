@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CoinScipt : MonoBehaviour
 {
-    public float timer;
+    [SerializeField] private float timer;
     public float seconds;
     private bool ticking;
     // Start is called before the first frame update
@@ -33,6 +33,7 @@ public class CoinScipt : MonoBehaviour
     void OnCollisionEnter(Collision other) {
         if(GetComponent<Rigidbody>().isKinematic == true) {
             //GetComponent<Rigidbody>().isKinematic = false;
+            timer = seconds;
         }
     }
 

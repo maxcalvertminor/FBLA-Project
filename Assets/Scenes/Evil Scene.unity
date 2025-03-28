@@ -3118,6 +3118,11 @@ MonoBehaviour:
   silver_coin: {fileID: 401810980382673745, guid: 4d1e5af537452cb4a99ded4c10ff0490, type: 3}
   gem_list:
   - {fileID: 5702950450368060075, guid: 46242822ba2a0884491c766949101445, type: 3}
+  - {fileID: 5702950450368060075, guid: d4db7ccbda9fa334ba2e03ed20f191e5, type: 3}
+  - {fileID: 5702950450368060075, guid: 441dfb9c1a634284787dde6fbc3b491c, type: 3}
+  - {fileID: 5702950450368060075, guid: 87971c3f81468fa478d57747d74d150e, type: 3}
+  - {fileID: 5702950450368060075, guid: e351a0ca2317e3c49a277dd8f6a4f598, type: 3}
+  - {fileID: 5702950450368060075, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
   drop_list: []
   coin_drop_pos: {x: 0, y: 50, z: 0}
   randomness: 1
@@ -9828,6 +9833,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &1682728523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.78946
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22105844
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.5494156
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104175014867765598, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702950450368060075, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
+      propertyPath: m_Name
+      value: Topaz
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e1af1e49410ff8429525b51a0401730, type: 3}
 --- !u!4 &1693523394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7f9b57a02a16e55429c68854f45a8801, type: 3}
@@ -11472,3 +11534,4 @@ SceneRoots:
   - {fileID: 1357149311}
   - {fileID: 1293929026}
   - {fileID: 975593850}
+  - {fileID: 1682728523}

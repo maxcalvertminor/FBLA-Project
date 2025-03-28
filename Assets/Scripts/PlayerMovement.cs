@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 direction;
     public float interactDistance;
     private GameObject[] inv;
+    public float warp_value;
     //public int invSize;
     //private int invIterator;
 
@@ -50,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
                 
             
             }
+        }
+
+        if(player.transform.position.y < warp_value) {
+            player.transform.position += Vector3.up * 625.01f;
         }
     }
 }

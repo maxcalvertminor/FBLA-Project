@@ -1409,6 +1409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vault: {fileID: 425245740}
+  amount: 0
   sack_o_coins: []
   gold_coin: {fileID: 401810980382673745, guid: a7a4095aa5aa78d43a397aee1fa39739, type: 3}
   bronze_coin: {fileID: 401810980382673745, guid: 9b00efcfe72d60942a19c4be9191b66f, type: 3}
@@ -3366,8 +3367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cashText: {fileID: 1112788085}
-  FinalTransAmount: 0
-  InputHandlerHandler: {fileID: 1618523876}
+  vault: {fileID: 0}
+  input_handler: {fileID: 0}
 --- !u!114 &1112788085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3532,7 +3533,6 @@ GameObject:
   - component: {fileID: 1222371630}
   - component: {fileID: 1222371629}
   - component: {fileID: 1222371628}
-  - component: {fileID: 1222371632}
   - component: {fileID: 1222371631}
   m_Layer: 5
   m_Name: Cash
@@ -3619,25 +3619,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2320b27dc07c8764692dd887b461cdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cashText: {fileID: 0}
-  FinalTransAmount: 0
-  InputHandlerHandler: {fileID: 0}
---- !u!114 &1222371632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222371626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d5f99babaf9f0479a02a9ff6a24419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RelayText: {fileID: 0}
-  AmountInput: {fileID: 0}
-  TransAmount: 0
-  AmountDisplay: {fileID: 0}
+  cashText: {fileID: 1112788085}
+  vault: {fileID: 425245740}
+  input_handler: {fileID: 1618523877}
 --- !u!1 &1332957521
 GameObject:
   m_ObjectHideFlags: 0

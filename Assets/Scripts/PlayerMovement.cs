@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         direction.y = body.velocity.y;
         body.velocity = transform.TransformDirection(direction);
 
+
         if(Input.GetButtonDown("Interact")) {
             LayerMask mask = LayerMask.GetMask("Interactable", "Pickupable");
             RaycastHit hit;

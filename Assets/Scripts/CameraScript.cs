@@ -13,12 +13,13 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
@@ -27,6 +28,19 @@ public class CameraScript : MonoBehaviour
         xRotate += mouseX  * sensitivity * Time.deltaTime;
         cam.transform.localEulerAngles = new Vector3(yRotate, 0, 0);
         player.transform.eulerAngles = new Vector3(0, xRotate, 0);
+
+       
+
+        // float mouseX = Input.GetAxis("Mouse X");
+        //float mouseY = Input.GetAxis("Mouse Y");
+
+        //float newMousex =Mathf.Clamp(Input.mousePosition.x, 100, 100);
+        //float newMousey= Mathf.Clamp(Input.mousePosition.y, 100, 100);
+       // newMousePos = new Vector2(newMousex, newMousey);
+
+
+
+
         //player.transform.eulerAngles += (new Vector3(0, mouseX, 0) * sensitivity);
     }
 }

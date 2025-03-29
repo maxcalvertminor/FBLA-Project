@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         direction.y = body.velocity.y;
         body.velocity = transform.TransformDirection(direction);
 
+
         if(Input.GetButtonDown("Interact")) {
             Debug.Log("Hit");
             LayerMask mask = LayerMask.GetMask("Interactable", "Pickupable");

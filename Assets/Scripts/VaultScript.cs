@@ -6,7 +6,7 @@ using UnityEngine.UIElements.Experimental;
 public class VaultScript : MonoBehaviour
 {
     public GameObject vault;
-    private int amount;
+    public int amount;
     public List<Transaction> list;
     public List<GameObject> sack_o_coins;
     public GameObject gold_coin;

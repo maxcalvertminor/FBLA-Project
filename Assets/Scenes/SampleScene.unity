@@ -975,7 +975,9 @@ RectTransform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1618523878}
   - {fileID: 1694543894}
+  - {fileID: 2085099267}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -19.569, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1414,10 +1416,14 @@ MonoBehaviour:
   gold_coin: {fileID: 401810980382673745, guid: a7a4095aa5aa78d43a397aee1fa39739, type: 3}
   bronze_coin: {fileID: 401810980382673745, guid: 9b00efcfe72d60942a19c4be9191b66f, type: 3}
   silver_coin: {fileID: 401810980382673745, guid: 4d1e5af537452cb4a99ded4c10ff0490, type: 3}
+  gem_list: []
+  drop_list: []
   coin_drop_pos: {x: 0, y: 50, z: 0}
   randomness: 1
-  useful_y_constant: 0
-  coin_rate_of_fire: 0.005
+  proportion_constant: 0
+  fling_seconds: 0
+  fling_speed: 0
+  fling_vector: {x: 0, y: 0, z: 0}
 --- !u!1 &432635968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2371,7 @@ MonoBehaviour:
   mainCamera: {fileID: 2094386944}
   speed: 5
   interactDistance: 3
+  warp_value: 0
 --- !u!54 &854649450
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3987,6 +3994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vault_script: {fileID: 425245746}
+  t: 0
+  amount: 0
 --- !u!1 &1384976818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,12 +4906,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618523876}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.82135373, y: 2.8546336, z: 10.387213}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.16994359, y: -0, z: -0, w: 0.98545384}
+  m_LocalPosition: {x: -77.33537, y: 35.98445, z: 266.7839}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 223095143}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662782637
 GameObject:
@@ -6069,12 +6078,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085099265}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6480906, y: 2.5116463, z: 9.3880205}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.16994359, y: -0, z: -0, w: 0.98545384}
+  m_LocalPosition: {x: 69.609055, y: 37.13413, z: 161.14804}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 223095143}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2087333694
 GameObject:
@@ -6418,5 +6427,3 @@ SceneRoots:
   - {fileID: 1676431811}
   - {fileID: 1222371630}
   - {fileID: 223095143}
-  - {fileID: 1618523878}
-  - {fileID: 2085099267}

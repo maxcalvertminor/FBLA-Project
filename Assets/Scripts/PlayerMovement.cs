@@ -37,11 +37,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         if(Input.GetButtonDown("Interact")) {
-            Debug.Log("Hit");
             LayerMask mask = LayerMask.GetMask("Interactable", "Pickupable");
             RaycastHit hit;
             if(Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, interactDistance, mask)) {
-                //Debug.Log("Hit!");
+                Debug.Log("Hit! " + hit.collider.gameObject);
                 hit.collider.gameObject.GetComponent<InteractScript>().interact();
                 /*if(hit.rigidbody.gameObject.layer == 9) {
                     hit.rigidbody.gameObject.GetComponent<InteractScript>().interact();

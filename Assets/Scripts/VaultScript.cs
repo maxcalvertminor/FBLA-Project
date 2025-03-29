@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements.Experimental;
 
@@ -7,7 +8,7 @@ public class VaultScript : MonoBehaviour
 {
     public GameObject vault;
     public int amount;
-    public List<Transaction> list;
+    [SerializeField] public List<Transaction> transaction_list;
     public List<GameObject> sack_o_coins;
     public GameObject gold_coin;
     public GameObject bronze_coin;
@@ -30,6 +31,7 @@ public class VaultScript : MonoBehaviour
     {
         sack_o_coins = new List<GameObject>();
         drop_list = new List<GameObject>();
+        transaction_list = new List<Transaction>();
         v_timer = 0;
     }
 
@@ -49,7 +51,7 @@ public class VaultScript : MonoBehaviour
     }
 
     public void transact(Transaction t) {
-        //list.add(t);
+        transaction_list.Add(t);
         if(t.type == TransactionType.Deposit) {
             amount += t.amount;
             int gems = amount / 1000;

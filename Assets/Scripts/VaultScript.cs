@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 public class VaultScript : MonoBehaviour
 {
@@ -16,25 +17,32 @@ public class VaultScript : MonoBehaviour
     public Vector3 coin_drop_pos;
     public float randomness;
     private bool dropping;
-    public float useful_y_constant;
-    public float coin_rate_of_fire;
-    private float timer;
+    public float proportion_constant;
+    private float coin_rate_of_fire;
+    private float v_timer;
+
+    public float fling_seconds;
+    public float fling_speed;
+    public Vector3 fling_vector;
+
     // Start is called before the first frame update
     void Start()
     {
         sack_o_coins = new List<GameObject>();
         drop_list = new List<GameObject>();
-        timer = 0;
+        v_timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {   
         if(drop_list.Count != 0) {
-            timer += Time.deltaTime;
-            if(timer > coin_rate_of_fire) {
-                timer = 0;
-                Instantiate(drop_list[0], coin_drop_pos, Random.rotation);
+            v_timer += Time.deltaTime;
+            if(v_timer > coin_rate_of_fire) {
+                v_timer = 0;
+                GameObject c_coin = Instantiate(drop_list[0], coin_drop_pos, Random.rotation);
+                c_coin.GetComponent<CoinScipt>().ticking = true;
+                sack_o_coins.Add(c_coin);
                 drop_list.RemoveAt(0);
             }
         }
@@ -63,7 +71,17 @@ public class VaultScript : MonoBehaviour
             }
         } else {
             amount -= t.amount;
+            float value = 0;
+            for(float i = 0; i < t.amount; i += value){
+                if(sack_o_coins.Count == 0) {
+                    i = t.amount + 1;
+                }
+                sack_o_coins[sack_o_coins.Count - 1].GetComponent<CoinScipt>().fling(fling_seconds, fling_speed, fling_vector.x, fling_vector.y, fling_vector.z);
+                value = sack_o_coins[sack_o_coins.Count - 1].GetComponent<CoinScipt>().value;
+                sack_o_coins.RemoveAt(sack_o_coins.Count - 1);
+            }
         }
+        coin_rate_of_fire = proportion_constant / drop_list.Count;
     }
 
     private void OnDrawGizmos() {

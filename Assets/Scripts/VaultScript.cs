@@ -8,7 +8,7 @@ public class VaultScript : MonoBehaviour
 {
     public GameObject vault;
     public int amount;
-    [SerializeField] public List<Transaction> transaction_list;
+    public List<Transaction> transaction_list;
     public List<GameObject> sack_o_coins;
     public GameObject gold_coin;
     public GameObject bronze_coin;

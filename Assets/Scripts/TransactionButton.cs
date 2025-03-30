@@ -25,7 +25,7 @@ public class TransactionButton : InteractScript
     public override void interact() {
         t = InputHandler.ActionSelect.GetComponent<DropdownMenu>().type;
         amount = InputHandler.TransAmount;
-        Transaction t1 = new Transaction(t, amount, DateTime.Today);
+        Transaction t1 = new Transaction(t, amount, DateTime.Now);
         vault_script.transact(t1);
     }
 }

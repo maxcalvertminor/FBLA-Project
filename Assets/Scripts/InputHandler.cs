@@ -24,7 +24,7 @@ public class InputHandler : MonoBehaviour
     {
     //  _wordText.text = _wordInputField.text;
 
-     RelayText.text = "You are " + amounttran.ToString();   
+     //RelayText.text = "You are " + amounttran.ToString();   
      TransAmount = amounttran;
      AmountDisplay.text = amounttran.ToString();
     }

@@ -8,6 +8,14 @@ public class VaultScript : MonoBehaviour
 {
     public GameObject vault;
     public int amount;
+    public int checking_account;
+    public int savings_account;
+    public int account1;
+    public int account2;
+    public int deposits;
+    public int withdrawals;
+    public int transfers;
+    public int total_transactions;
     public List<Transaction> transaction_list;
     public List<GameObject> sack_o_coins;
     public GameObject gold_coin;
@@ -54,10 +62,10 @@ public class VaultScript : MonoBehaviour
         transaction_list.Add(t);
         if(t.type == TransactionType.Deposit) {
             amount += t.amount;
-            int gems = amount / 1000;
-            int gold = amount % 1000 / 100;
-            int silver = amount % 1000 % 100 / 10;
-            int bronze = amount % 1000 % 100 % 10;
+            int gems = t.amount / 1000;
+            int gold = t.amount % 1000 / 100;
+            int silver = t.amount % 1000 % 100 / 10;
+            int bronze = t.amount % 1000 % 100 % 10;
 
             for(int i = 0; i < gems; gems--) {
                 drop_list.Add(gem_list[Random.Range(0, gem_list.Length)]);
@@ -71,6 +79,24 @@ public class VaultScript : MonoBehaviour
             for(int i = 0; i < bronze; bronze--) {
                 drop_list.Add(bronze_coin);
             }
+
+            deposits++;
+            total_transactions++;
+
+            switch(t.account) {
+                case "Checking":
+                    checking_account += t.amount;
+                    break;
+                case "Savings":
+                    savings_account += t.amount;
+                    break;
+                case "Emergency":
+                    account1 += t.amount;
+                    break;
+                case "Rainy Day":
+                    account2 += t.amount;
+                    break;
+            }
         } else {
             amount -= t.amount;
             float value = 0;
@@ -82,8 +108,33 @@ public class VaultScript : MonoBehaviour
                 value = sack_o_coins[sack_o_coins.Count - 1].GetComponent<CoinScipt>().value;
                 sack_o_coins.RemoveAt(sack_o_coins.Count - 1);
             }
+
+            if(t.type == TransactionType.Withdrawal) {
+                withdrawals++;
+            } else {
+                transfers++;
+            }
+            total_transactions++;
+
+            switch(t.account) {
+                case "Checking":
+                    checking_account -= t.amount;
+                    break;
+                case "Savings":
+                    savings_account -= t.amount;
+                    break;
+                case "Account 1":
+                    account1 -= t.amount;
+                    break;
+                case "Account 2":
+                    account2 -= t.amount;
+                    break;
+            }
         }
-        coin_rate_of_fire = proportion_constant / drop_list.Count;
+        if(drop_list.Count > 27) {
+            coin_rate_of_fire = proportion_constant / drop_list.Count;
+        }
+        
     }
 
     private void OnDrawGizmos() {

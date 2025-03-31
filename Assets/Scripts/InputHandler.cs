@@ -22,9 +22,10 @@ public class InputHandler : MonoBehaviour
 
     public GameObject ActionSelect;
     public GameObject AccountSelect;
+    public GameObject player;
 
     void Start() {
-        account = "Checkings";
+        account = "Checking";
     }
     // Update is called once per frame
     void Update()
@@ -47,22 +48,29 @@ public class InputHandler : MonoBehaviour
     public void setAccount(int index) {
         switch(index) {
             case 0:
-                account = "Checkings";
-                AccountDisplay.text = "Checkings";
+                account = "Checking";
+                AccountDisplay.text = "Checking";
                 break;
             case 1:
                 account = "Savings";
                 AccountDisplay.text = "Savings";
                 break;
             case 2:
-                account = "Untitled 1";
-                AccountDisplay.text = "Untitled 1";
+                account = "Emergency";
+                AccountDisplay.text = "Emergency";
                 break;
             case 3:
-                account = "Untitled 2";
-                AccountDisplay.text = "Untitled 2";
+                account = "Rainy Day";
+                AccountDisplay.text = "Rain Day";
                 break;
         }
+    }
+
+    public void LockPlayerMovement() {
+        player.GetComponent<PlayerMovement>().enabled = false;
+    }
+    public void UnlockPlayerMovement() {
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
 
 }

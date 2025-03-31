@@ -24,7 +24,7 @@ public class SearchFunctions : MonoBehaviour
 
     public GameObject vault;
     public GameObject rank_type_obj;
-    public GameObject category_obj;
+    public TMP_Text category_display;
     public GameObject display_area;
     public GameObject single_item_prefab;
 
@@ -146,5 +146,10 @@ public class SearchFunctions : MonoBehaviour
     public void SearchButtonMethod() {
         starting_pos = starting_pos_reset;
         Generate_Display();
+    }
+
+    public void SetCategory(string c) {
+        category = c;
+        category_display.text = category;
     }
 }

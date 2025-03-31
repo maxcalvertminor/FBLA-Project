@@ -10,15 +10,17 @@ public class Transaction
     public int amount;
     public DateTime date;
     public string reason;
-    public Transaction(TransactionType t, int a, DateTime d, string r = "Unspecified") {
+    public string account;
+    public Transaction(TransactionType t, int a, DateTime d, string r = "Unspecified", string ac = "Checking") {
         type = t;
         amount = a;
         date = d;
         reason = r;
+        account = ac;
     }
 
     public string Write() {
-        return "" + type + " of " + amount + " at " + date + ". \n" + reason;
+        return "" + account + ": " + type + " of " + amount + ". \n" + reason + " at " + date + ".";
     }
 
 }

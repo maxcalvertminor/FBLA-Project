@@ -8,8 +8,6 @@ public class VaultScript : MonoBehaviour
 {
     public GameObject vault;
     public int amount;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     public int checking_account;
     public int savings_account;
     public int account1;
@@ -19,11 +17,7 @@ public class VaultScript : MonoBehaviour
     public int transfers;
     public int total_transactions;
     public List<Transaction> transaction_list;
-=======
-=======
->>>>>>> Stashed changes
-    public List<Transaction> list;
->>>>>>> Stashed changes
+
     public List<GameObject> sack_o_coins;
     public GameObject gold_coin;
     public GameObject bronze_coin;
